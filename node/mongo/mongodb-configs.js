@@ -21,9 +21,20 @@ function querySimpleCode (object, resultCallback, errorCallback) {
   mongodbManager.queryArray(MongoConfigs.simpleCode, object, resultCallback, errorCallback)
 }
 
+function queryPublished (object, resultCallback, errorCallback) {
+  mongodbManager.queryArray(MongoConfigs.published, object, resultCallback, errorCallback)
+}
+
+function queryMarkdown (object, resultCallback, errorCallback) {
+  mongodbManager.queryOne(MongoConfigs.markdown, object, resultCallback, errorCallback)
+}
+
 exports.insertVisitor = insertVisitor
+exports.queryMarkdown = queryMarkdown
 
 exports.queryWorkbenchConfigs = queryWorkbenchConfigs
 exports.queryKnowledge = queryKnowledge
+
 exports.queryOpenSourceConfigs = queryOpenSourceConfigs
 exports.querySimpleCode = querySimpleCode
+exports.queryPublished = queryPublished

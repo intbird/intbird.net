@@ -21,13 +21,13 @@ app.get(apiKeys.root, function (req, res) {
 })
 
 app.get(apiKeys.visitor, function (req, res) {
-  const app_from = req.params && req.params.from ? req.params.from : "none"
+  const app_from = req.query && req.query.from ? req.query.from : "none"
   const ip_from = req.ip ? req.ip : "none"
   const result = {insertVisitor: '1', ip_from, app_from}
   mongoConfig.insertVisitor(result, () => {
   }, () => {
   })
-  res.send(result)
+  res.send({})
 })
 
 const trackFlowResult = []
@@ -66,9 +66,36 @@ app.get(apiKeys.openSourceProject, function (req, res) {
   })
 })
 
+app.get(apiKeys.openSourceProject, function (req, res) {
+  const result = {}
+  mongoConfig.queryOpenSourceConfigs(result, result => {
+    res.send(result)
+  }, () => {
+    res.send({})
+  })
+})
+
 app.get(apiKeys.simpleCodes, function (req, res) {
   const result = {}
   mongoConfig.querySimpleCode(result, result => {
+    res.send(result)
+  }, () => {
+    res.send({})
+  })
+})
+
+app.get(apiKeys.published, function (req, res) {
+  const result = {}
+  mongoConfig.queryPublished(result, result => {
+    res.send(result)
+  }, () => {
+    res.send({})
+  })
+})
+
+app.get(apiKeys.markdown, function (req, res) {
+  const id = req.query && req.query.id ? req.query.id : '0'
+  mongoConfig.queryMarkdown({id}, result => {
     res.send(result)
   }, () => {
     res.send({})

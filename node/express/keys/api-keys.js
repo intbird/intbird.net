@@ -5,6 +5,10 @@ module.exports = {
 
   workbenchConfigs: '/workbenchConfigs',
   knowledge: '/knowledge',
+
   openSourceProject: '/openSource',
   simpleCodes: '/simpleCode',
+  published: '/published',
+
+  markdown: '/markdown'
 }

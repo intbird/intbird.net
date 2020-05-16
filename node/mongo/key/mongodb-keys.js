@@ -6,6 +6,10 @@ module.exports = {
   connVisitor: 'visitor',
   connWorkbench: 'workbench',
   knowledge: 'knowledge',
+
   openSource: 'openSource',
-  simpleCode: 'simpleCode'
+  simpleCode: 'simpleCode',
+  published: 'published',
+
+  markdown: 'markdown',
 }
