@@ -55,7 +55,6 @@
             this.knowledge = response.data
           })
           .catch(function (error) {
-            this.loading = false
             console.log('queryConfigs', error)
           })
           .finally(function () {

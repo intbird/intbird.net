@@ -9,6 +9,8 @@
         <el-row class="menu-style">
           <el-col>
             <el-menu
+              v-loading="loading"
+              element-loading-background="rgba(0, 0, 0, 0.2)"
               ref="menu"
               class="menu-layout"
               @open="handleOpen"
@@ -18,10 +20,14 @@
               background-color="#545c64"
               text-color="#fff"
               active-text-color="#397CC4">
+              <div v-for="(item,index) in pageData.personal.item" :key="pageData.personal.key+index">
+                <SubMenuGroup v-if="item.menus" :menu-config="item" :menu-index="pageData.personal.key+index"/>
+                <SubMenuSingle v-else :menu-config="item" :menu-index="pageData.personal.key+index"/>
+              </div>
 
-              <div v-for="(item,index) in configs" :key="index">
-                <SubMenuGroup v-if="item.menus" :menu-config="item" :menu-index="index+''"/>
-                <SubMenuSingle v-else :menu-config="item" :menu-index="index+''"/>
+              <div v-for="(item,index) in pageData.published.item" :key="pageData.published.key+index">
+                <SubMenuGroup v-if="item.menus" :menu-config="item" :menu-index="pageData.published.key+index"/>
+                <SubMenuSingle v-else :menu-config="item" :menu-index="pageData.published.key+index"/>
               </div>
             </el-menu>
           </el-col>
@@ -37,6 +43,7 @@
 <script>
   import SubMenuGroup from '../components/summenu/SubMenuGroup'
   import SubMenuSingle from '../components/summenu/SubMenuSingle'
+  import startWith from "../utils/StringUtils";
 
   const axios = require('axios')
   const Base64 = require('js-base64').Base64
@@ -44,61 +51,70 @@
   export default {
     name: 'OpenSourcePage',
     components: {SubMenuGroup, SubMenuSingle},
-    data () {
+    data() {
       return {
         loading: true,
+        markdownId: 0,
         markdownContent: '##### markdown preview 点击右上方小眼睛切换 `编辑/预览`',
-        configs: [
-          {
-            icon: 'el-icon-lock',
-            title: '部分改造经历',
-            menus: [],
+
+        pageData: {
+          personal: {
+            key: 'personal',
+            item: [{
+              icon: 'el-icon-lock',
+              title: '部分改造经历',
+              menus: [],
+            },
+              {
+                icon: 'el-icon-dish',
+                title: '部分快捷代码',
+                menus: [],
+              }],
           },
-          {
-            icon: 'el-icon-dish',
-            title: '部分快捷代码',
-            menus: [],
-          },
-          {
-            icon: 'el-icon-s-promotion',
-            title: 'SocketIO Control',
-            menus: [
-              {title: 'online', url: 'https://intbird.world/#/socketio'},
-              {title: 'server', url: 'https://github.com/intbird/SocketIOControl-Server'},
-              {title: 'android', url: 'https://github.com/intbird/SocketIOControl-Android'},
-            ]
-          },
-          {
-            icon: 'el-icon-upload',
-            title: 'Maven Publish',
-            url: 'https://github.com/intbird/maven-publish',
-          },
-          {
-            icon: 'el-icon-video-play',
-            title: 'Media Player',
-            menus: [
-              {title: '实现介绍', url: 'https://blog.csdn.net/intbird/article/details/105970536'},
-              {title: '开源发布', url: 'https://github.com/intbird/VideoPlayerLib'},
-            ]
-          }, {
-            icon: 'el-icon-house',
-            title: 'This Website',
-            url: 'https://github.com/intbird/maven-publish',
-          },
-          {
-            title: 'developing...',
-          },
-        ]
+
+          published: {
+            key: 'published',
+            item: [{
+              icon: 'el-icon-s-promotion',
+              title: 'SocketIO Control',
+              menus: [],
+            },
+              {
+                icon: 'el-icon-upload',
+                title: 'Maven Publish',
+                menus: [],
+              },
+              {
+                icon: 'el-icon-video-play',
+                title: 'Media Player',
+                menus: [],
+              }, {
+                icon: 'el-icon-house',
+                title: 'This Website',
+                menus: [],
+              }, {
+                title: 'developing',
+                url: 'https://github.com/intbird/intbird/',
+              }],
+          }
+        }
       }
     },
-    created () {
+    created() {
       this.queryConfigs()
       this.addVisitor('opensrouce')
     },
+    watch: {
+      markdownContent: function (newValue, oldValue) {
+        if (!newValue) {
+          this.markdownContent = '##### markdown preview 点击右上方小眼睛切换 `编辑/预览`'
+        }
+      }
+    },
     methods: {
-      addVisitor (from) {
+      addVisitor(from) {
         axios.get(this.ConnectionUrl + '/visitor?from=' + from)
-          .then(function (response) {
+          .then(function () {
             console.log('thanks 访问 +1')
           })
           .catch(function (error) {
@@ -106,15 +122,16 @@
           .finally(function () {
           })
       },
-      queryConfigs () {
+      queryConfigs() {
         // open source
         axios.get(this.ConnectionUrl + '/openSource')
           .then(response => {
             this.loading = false
-            this.configs[0].menus = response.data
+            if (response && response.data) {
+              this.pageData.personal.item[0].menus = response.data
+            }
           })
           .catch(function (error) {
-            this.loading = false
           })
           .finally(function () {
           })
@@ -123,26 +140,65 @@
         axios.get(this.ConnectionUrl + '/simpleCode')
           .then(response => {
             this.loading = false
-            this.configs[1].menus = response.data
+            if (response && response.data)
+              this.pageData.personal.item[1].menus = response.data
+          })
+          .catch(function (error) {
+          })
+          .finally(function () {
+          })
+
+        // published
+        axios.get(this.ConnectionUrl + '/published')
+          .then(response => {
+            this.loading = false
+            if (response && response.data)
+              this.pageData.published.item = response.data
           })
           .catch(function (error) {
           })
           .finally(function () {
           })
       },
-      setDefaultUI () {
-        this.$refs.menu.close()
-        this.markdownContent = ''
+      queryMarkdown(id, callback) {
+        this.loading = true
+        this.markdownId = id;
+        axios.get(this.ConnectionUrl + '/markdown?id=' + id)
+          .then(response => {
+            if (response && response.data) {
+              this.loading = false
+              const id = response.data.id;
+              const markdown = response.data.markdown;
+              if (this.markdownId.toString() === id.toString()) {
+                this.markdownContent = Base64.decode(markdown)
+                if (callback) callback(id, markdown)
+              } else {
+                this.markdownContent = '获取文档异常,请联系作者发送反馈'
+              }
+            } else {
+              this.markdownContent = ""
+            }
+          })
+          .catch(function (error) {
+          })
+          .finally(function () {
+          })
       },
-      handleOpen (key, keyPath) {
-        console.log('ffff' + key + ' ' + keyPath)
+      handleOpen(elKey, keyPath) {
       },
-      handleSelect (key, keyPath) {
-
+      handleSelect(elKey, keyPath) {
+        if (startWith(elKey, this.pageData.personal.key)) {
+          this.handleSelectItem(elKey, this.pageData.personal.key, this.pageData.personal.item);
+        } else if (startWith(elKey, this.pageData.published.key)) {
+          this.handleSelectItem(elKey, this.pageData.published.key, this.pageData.published.item);
+        }
+      },
+      handleSelectItem(elKey, configKey, configItems) {
         // SubMenu :index="menuIndex+'-'+index"
+        const key = elKey.replace(configKey, '');
         if (key.indexOf('-') === -1) {
           const itemIndex = parseInt(key)
-          const item = this.configs[itemIndex]
+          const item = configItems[itemIndex]
           if (item.url) {
             window.open(item.url, '_blank')
           }
@@ -150,22 +206,32 @@
           const indexArray = key.split('-')
           const itemIndex = parseInt(indexArray[0])
           const menuIndex = parseInt(indexArray[1])
-          // menu  { icon: '', title: '', url: '', menus:[ id:'', title:'', markdown:"",url:"" ]}
-          const item = this.configs[itemIndex]
+          // menu  { icon: '', title: '', url: '', menus:[ id:'', title:'',url:"" , mkid:'', markdown:""]}
+          // url -> mkid -> markdown
+          const item = configItems[itemIndex]
           if (item.url) {
             window.open(item.url, '_blank')
           } else if (item.menus) {
             const menuItem = item.menus[menuIndex]
             if (menuItem.url) {
               window.open(menuItem.url, '_blank')
+            } else if (menuItem.mkid) {
+              if (menuItem.markdown && menuItem.markdown.length > 0) {
+                this.markdownContent = Base64.decode(menuItem.markdown)
+              } else {
+                this.queryMarkdown(menuItem.mkid, (id, markdown) => {
+                  if (id && markdown && id.toString() === menuItem.mkid.toString()) {
+                    menuItem.markdown = markdown
+                  }
+                })
+              }
             } else if (menuItem.markdown) {
               this.markdownContent = Base64.decode(menuItem.markdown)
             }
           }
         }
       },
-      handleClose (key, keyPath) {
-        console.log(key, keyPath)
+      handleClose(key, keyPath) {
       }
     }
   }

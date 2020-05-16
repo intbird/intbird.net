@@ -30,6 +30,14 @@ new Vue({
   }
 })
 
+import hljs from 'highlight.js'
+import 'highlight.js/styles/monokai-sublime.css'
+Vue.directive('highlight',function (el) {
+  let highlight = el.querySelectorAll('pre code');
+  highlight.forEach((block)=>{
+    hljs.highlightBlock(block)
+  })
+})
 
 Vue.config.productionTip = false
 

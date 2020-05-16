@@ -29,7 +29,9 @@
         </el-menu>
       </el-header>
       <el-main>
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </el-main>
     </el-container>
   </div>
@@ -58,6 +60,7 @@
           Key: '2-',
           title: '联系方式',
           Menus: [
+            {title: 'EMail', url: 'intbird@163.com'},
             {title: 'CSDN', url: 'https://blog.csdn.net/intbird'},
             {title: 'Github', url: 'https://github.com/intbird'},
             {title: 'GitLab', url: 'https://gitlab.com/intbird'},
@@ -73,9 +76,9 @@
       this.addVisitor('app')
     },
     methods: {
-      addVisitor (from) {
+      addVisitor(from) {
         axios.get(this.ConnectionUrl + '/visitor?from=' + from)
-          .then(function (response) {
+          .then(function () {
             console.log('thanks 访问 +1')
           })
           .catch(function (error) {
@@ -83,7 +86,7 @@
           .finally(function () {
           })
       },
-      getSelect (selectKeyPath, arrayKey, array) {
+      getSelect(selectKeyPath, arrayKey, array) {
         if (startWith(selectKeyPath, arrayKey)) {
           const index = selectKeyPath.toString().replace(arrayKey, '')
           if (index >= 0 && index < array.length) {
@@ -91,7 +94,7 @@
           }
         }
       },
-      handleSelect (key, keyPath) {
+      handleSelect(key, keyPath) {
         // app menu
         const appMenuItem = this.getSelect(key, this.myApp.Key, this.myApp.Menus)
         if (appMenuItem) {
@@ -105,7 +108,11 @@
         if (contactItem) {
           const linkUrl = contactItem.url
           if (linkUrl) {
-            window.open(linkUrl, '_blank')
+            if (linkUrl === "intbird@163.com") {
+              window.location = "mailto:intbird@163.com?subject=hello intbird&body=hello:intbird";
+            } else {
+              window.open(linkUrl, '_blank')
+            }
           }
         }
       }
