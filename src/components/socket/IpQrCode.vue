@@ -73,7 +73,7 @@
       },
       querySearch(queryString, cb) {
         const result = [
-          {"value": "intbird.world"},
+          {"value": "intbird.world:996"},
         ];
         cb(result);
         this.showQRCode();
