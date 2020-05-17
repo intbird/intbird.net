@@ -69,6 +69,10 @@
                 icon: 'el-icon-dish',
                 title: '部分快捷代码',
                 menus: [],
+              }, {
+                icon: 'el-icon-document',
+                title: '部分随手笔记',
+                menus: [],
               }],
           },
 
@@ -142,6 +146,18 @@
             this.loading = false
             if (response && response.data)
               this.pageData.personal.item[1].menus = response.data
+          })
+          .catch(function (error) {
+          })
+          .finally(function () {
+          })
+
+        // keynotes
+        axios.get(this.ConnectionUrl + '/keynotes')
+          .then(response => {
+            this.loading = false
+            if (response && response.data)
+              this.pageData.personal.item[2].menus = response.data
           })
           .catch(function (error) {
           })
