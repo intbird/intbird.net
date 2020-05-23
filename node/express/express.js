@@ -84,6 +84,15 @@ app.get(apiKeys.simpleCodes, function (req, res) {
   })
 })
 
+app.get(apiKeys.keynotes, function (req, res) {
+  const result = {}
+  mongoConfig.queryKeynotes(result, result => {
+    res.send(result)
+  }, () => {
+    res.send({})
+  })
+})
+
 app.get(apiKeys.published, function (req, res) {
   const result = {}
   mongoConfig.queryPublished(result, result => {

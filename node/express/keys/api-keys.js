@@ -9,6 +9,7 @@ module.exports = {
   openSourceProject: '/openSource',
   simpleCodes: '/simpleCode',
   published: '/published',
+  keynotes: '/keynotes',
 
   markdown: '/markdown'
 }

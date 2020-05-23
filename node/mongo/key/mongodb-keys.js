@@ -1,6 +1,8 @@
+const config = require('./mongodb-config')
+
 module.exports = {
-  dbUrl: 'mongodb://localhost:27017/mydb',
-  dbName: 'mydb',
+  dbUrl: config.url,
+  dbName: config.db,
 
   connSocket: 'socketio',
   connVisitor: 'visitor',
@@ -9,6 +11,7 @@ module.exports = {
 
   openSource: 'openSource',
   simpleCode: 'simpleCode',
+  keynotes: 'keynotes',
   published: 'published',
 
   markdown: 'markdown',

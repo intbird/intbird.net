@@ -21,6 +21,10 @@ function querySimpleCode (object, resultCallback, errorCallback) {
   mongodbManager.queryArray(MongoConfigs.simpleCode, object, resultCallback, errorCallback)
 }
 
+function queryKeynotes (object, resultCallback, errorCallback) {
+  mongodbManager.queryArray(MongoConfigs.keynotes, object, resultCallback, errorCallback)
+}
+
 function queryPublished (object, resultCallback, errorCallback) {
   mongodbManager.queryArray(MongoConfigs.published, object, resultCallback, errorCallback)
 }
@@ -38,3 +42,4 @@ exports.queryKnowledge = queryKnowledge
 exports.queryOpenSourceConfigs = queryOpenSourceConfigs
 exports.querySimpleCode = querySimpleCode
 exports.queryPublished = queryPublished
+exports.queryKeynotes = queryKeynotes

@@ -18,3 +18,4 @@ selenium-debug.log
 
 
 /node/cert
+/node/mongo/key/mongodb-config.js
