@@ -61,9 +61,6 @@
           title: '联系方式',
           Menus: [
             {title: 'EMail', url: 'intbird@163.com'},
-            {title: 'CSDN', url: 'https://blog.csdn.net/intbird'},
-            {title: 'Github', url: 'https://github.com/intbird'},
-            {title: 'GitLab', url: 'https://gitlab.com/intbird'},
             {title: '微信: xudeyu'},
             {title: '钉钉: intbird'},
             {title: '抖音: xudeyu1991'},

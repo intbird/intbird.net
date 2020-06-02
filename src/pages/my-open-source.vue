@@ -1,7 +1,7 @@
 <template>
   <div class="root-layout">
     <el-row style="margin-top: 20px;position: fixed;bottom: 200px;left:120px">
-      <el-button style="background: #444444;border: #4d5669" icon="el-icon-arrow-up" circle
+      <el-button style="background: #4d5669; border: 1px solid #444444" icon="el-icon-arrow-up" circle
                  onclick="window.scrollTo(0,0)"></el-button>
     </el-row>
     <el-container>
@@ -48,6 +48,21 @@
   const axios = require('axios')
   const Base64 = require('js-base64').Base64
 
+  const ROUTE_KEYS = {
+    experience:'experience'
+  }
+
+  const markdownDefault = '##### 持续开发中...\n' +
+    '\n' +
+    '1. 项目经历\n' +
+    '># [部分改造经历 -> 总览](http://intbird.world/#/opensource?action=experience)\n' +
+    '\n' +
+    '\n' +
+    '2. 开源平台\n' +
+    '># [CSDN](https://blog.csdn.net/intbird)\n' +
+    '># [GitLab](https://gitlab.com/intbird)\n' +
+    '># [Github](https://github.com/intbird)\n';
+
   export default {
     name: 'OpenSourcePage',
     components: {SubMenuGroup, SubMenuSingle},
@@ -55,7 +70,7 @@
       return {
         loading: true,
         markdownId: 0,
-        markdownContent: '##### markdown preview 点击右上方小眼睛切换 `编辑/预览`',
+        markdownContent: markdownDefault,
 
         pageData: {
           personal: {
@@ -96,10 +111,10 @@
                 icon: 'el-icon-house',
                 title: 'This Website',
                 menus: [],
-              }, {
-                title: 'developing',
-                url: 'https://github.com/intbird/intbird/',
-              }],
+              },
+              {title: 'CSDN', url: 'https://blog.csdn.net/intbird'},
+              {title: 'Gitlab', url: 'https://gitlab.com/intbird'},
+              {title: 'GitHub', url: 'https://github.com/intbird'}],
           }
         }
       }
@@ -108,18 +123,33 @@
       this.queryConfigs()
       this.addVisitor('opensrouce')
     },
+    mounted() {
+      this.parserQuery();
+    },
     watch: {
       markdownContent: function (newValue, oldValue) {
         if (!newValue) {
-          this.markdownContent = '##### markdown preview 点击右上方小眼睛切换 `编辑/预览`'
+          this.markdownContent = markdownDefault
         }
       }
     },
     methods: {
+      parserQuery() {
+        const querySets = this.$route.query
+        if (!querySets) {
+          return
+        }
+        if (querySets.action) {
+          // 打开总览
+          if (querySets.action === ROUTE_KEYS.experience) {
+             this.queryMarkdown('1',{})
+             // this.$refs.menu.open("personal0");
+          }
+        }
+      },
       addVisitor(from) {
         axios.get(this.ConnectionUrl + '/visitor?from=' + from)
           .then(function () {
-            console.log('thanks 访问 +1')
           })
           .catch(function (error) {
           })
@@ -203,6 +233,7 @@
       handleOpen(elKey, keyPath) {
       },
       handleSelect(elKey, keyPath) {
+        console.log("",elKey+" "+keyPath)
         if (startWith(elKey, this.pageData.personal.key)) {
           this.handleSelectItem(elKey, this.pageData.personal.key, this.pageData.personal.item);
         } else if (startWith(elKey, this.pageData.published.key)) {
