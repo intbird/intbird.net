@@ -3,6 +3,7 @@ const mongoConfig = require('../mongo/mongodb-configs.js')
 const express = require('express')
 const path = require('path')
 const fs = require('fs')
+const dataFormat = require('date-format')
 
 const app = express()
 
@@ -21,9 +22,12 @@ app.get(apiKeys.root, function (req, res) {
 })
 
 app.get(apiKeys.visitor, function (req, res) {
-  const app_from = req.query && req.query.from ? req.query.from : "none"
-  const ip_from = req.ip ? req.ip : "none"
-  const result = {insertVisitor: '1', ip_from, app_from}
+  // eslint-disable-next-line camelcase
+  const app_from = req.query && req.query.from ? req.query.from : 'none'
+  // eslint-disable-next-line camelcase
+  const ip_from = req.ip ? req.ip : 'none'
+  const time = dataFormat.asString(new Date())
+  const result = {ip_from, app_from, time}
   mongoConfig.insertVisitor(result, () => {
   }, () => {
   })
@@ -35,7 +39,7 @@ app.get(apiKeys.trackflow, function (req, res) {
   res.send(trackFlowResult)
 })
 
-function trackFlow(result) {
+function trackFlow (result) {
   trackFlowResult.push(result)
 }
 

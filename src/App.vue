@@ -4,8 +4,8 @@
       <el-header>
         <el-menu ref="menu" id="menu"
                  mode="horizontal" @select="handleSelect"
-                 background-color="#545c64"
                  text-color="#fff"
+                 background-color="#3E3F43"
                  active-text-color="#4299F0">
 
           <el-menu-item v-for="(item, index) in myApp.Menus"
@@ -117,7 +117,9 @@
   }
 </script>
 
-<style>
+<style scoped lang="scss">
+  @import "assets/css/navbar-style";
+
   #app {
     padding-top: 10px;
     padding-right: 10px;

@@ -17,17 +17,14 @@
               @close="handleClose"
               @select="handleSelect"
               :unique-opened="true"
-              background-color="#545c64"
               text-color="#fff"
-              active-text-color="#397CC4">
-              <div v-for="(item,index) in pageData.personal.item" :key="pageData.personal.key+index">
-                <SubMenuGroup v-if="item.menus" :menu-config="item" :menu-index="pageData.personal.key+index"/>
-                <SubMenuSingle v-else :menu-config="item" :menu-index="pageData.personal.key+index"/>
-              </div>
-
-              <div v-for="(item,index) in pageData.published.item" :key="pageData.published.key+index">
-                <SubMenuGroup v-if="item.menus" :menu-config="item" :menu-index="pageData.published.key+index"/>
-                <SubMenuSingle v-else :menu-config="item" :menu-index="pageData.published.key+index"/>
+              background-color="#3E3F43"
+              active-text-color="#4299F0">
+              <div v-for="(groupItem, index) in pageData" :key="index">
+                <div v-for="(item,index) in groupItem.item" :key="(groupItem.key)+index">
+                  <SubMenuGroup v-if="item.menus" :menu-config="item" :menu-index="groupItem.key+index"/>
+                  <SubMenuSingle v-else :menu-config="item" :menu-index="groupItem.key+index"/>
+                </div>
               </div>
             </el-menu>
           </el-col>
@@ -233,11 +230,8 @@
       handleOpen(elKey, keyPath) {
       },
       handleSelect(elKey, keyPath) {
-        console.log("",elKey+" "+keyPath)
-        if (startWith(elKey, this.pageData.personal.key)) {
-          this.handleSelectItem(elKey, this.pageData.personal.key, this.pageData.personal.item);
-        } else if (startWith(elKey, this.pageData.published.key)) {
-          this.handleSelectItem(elKey, this.pageData.published.key, this.pageData.published.item);
+        for (let item in this.pageData) {
+          this.handleSelectItem(elKey, this.pageData[item].key, this.pageData[item].item);
         }
       },
       handleSelectItem(elKey, configKey, configItems) {
@@ -256,9 +250,10 @@
           // menu  { icon: '', title: '', url: '', menus:[ id:'', title:'',url:"" , mkid:'', markdown:""]}
           // url -> mkid -> markdown
           const item = configItems[itemIndex]
-          if (item.url) {
+          if (!item) return
+          if (item.hasOwnProperty('url') && item.url) {
             window.open(item.url, '_blank')
-          } else if (item.menus) {
+          } else if (item.hasOwnProperty('menus') && item.menus) {
             const menuItem = item.menus[menuIndex]
             if (menuItem.url) {
               window.open(menuItem.url, '_blank')
@@ -284,7 +279,8 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import "../assets/css/navbar-style";
 
   .root-layout {
     display: flex;
