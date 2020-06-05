@@ -4,8 +4,8 @@
       <el-header>
         <el-menu ref="menu" id="menu"
                  mode="horizontal" @select="handleSelect"
-                 background-color="#545c64"
                  text-color="#fff"
+                 background-color="#3E3F43"
                  active-text-color="#4299F0">
 
           <el-menu-item v-for="(item, index) in myApp.Menus"
@@ -61,9 +61,6 @@
           title: '联系方式',
           Menus: [
             {title: 'EMail', url: 'intbird@163.com'},
-            {title: 'CSDN', url: 'https://blog.csdn.net/intbird'},
-            {title: 'Github', url: 'https://github.com/intbird'},
-            {title: 'GitLab', url: 'https://gitlab.com/intbird'},
             {title: '微信: xudeyu'},
             {title: '钉钉: intbird'},
             {title: '抖音: xudeyu1991'},
@@ -120,7 +117,9 @@
   }
 </script>
 
-<style>
+<style scoped lang="scss">
+  @import "assets/css/navbar-style";
+
   #app {
     padding-top: 10px;
     padding-right: 10px;
