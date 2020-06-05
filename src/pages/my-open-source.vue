@@ -240,7 +240,7 @@
         if (key.indexOf('-') === -1) {
           const itemIndex = parseInt(key)
           const item = configItems[itemIndex]
-          if (item.url) {
+          if (item && item.url) {
             window.open(item.url, '_blank')
           }
         } else {
