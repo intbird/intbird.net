@@ -22,7 +22,7 @@
     name: "QRCode",
     data() {
       return {
-        qrText: 'intbird.world:996',
+        qrText: 'itman.app:996',
         qrImage: '',
 
         tableTitle: [{
@@ -73,7 +73,7 @@
       },
       querySearch(queryString, cb) {
         const result = [
-          {"value": "intbird.world:996"},
+          {"value": "itman.app:996"},
         ];
         cb(result);
         this.showQRCode();
