@@ -1,7 +1,7 @@
 ServiceLoader
 ========
 
-This repo is for publish aar lib for  [intbird repo](http://itman.app:8081/nexus/content/repositories/public/).
+This repo is for publish aar lib for  [intbird repo](http://intbird.net:8081/nexus/content/repositories/public/).
 
 how about
 ![intbird](./images/intbird.png)
@@ -15,7 +15,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url "http://itman.app:8081/nexus/content/repositories/public/" }
+        maven { url "http://intbird.net:8081/nexus/content/repositories/public/" }
     }
 
     configurations.all {

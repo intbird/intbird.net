@@ -4,8 +4,8 @@ const https = require('https')
 const fs = require('fs')
 var path = require('path')
 const httpsOptions = {
-  cert: fs.readFileSync(path.join(__dirname, '../cert/itman.app.crt')),
-  key: fs.readFileSync(path.join(__dirname, '../cert/itman.key'))
+  cert: fs.readFileSync(path.join(__dirname, '../cert/intbird.net.crt')),
+  key: fs.readFileSync(path.join(__dirname, '../cert/intbird.key'))
 }
 
 const httpsServer = https.createServer(httpsOptions, express.app)
