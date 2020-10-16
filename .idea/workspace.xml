@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c3682c0-05fd-48dd-aa77-42f7c28c9361" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intbird.net.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_16,_1_34_下午_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/test.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/default-local-client-doc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/get-phone-screen-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/if-this-error-restart-mongo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/messages-panel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/pc-send-meesage-to-phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/phone-connected-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/phone-connected-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/phone-send-meeage-to-pc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/push-to-phone-clipbord.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/restart-mongo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/run-local-client.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/run-local-server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gituser/send message to all opened web.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/express/express.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/express/keys/api-keys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/mongo/key/mongodb-keys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/mongo/mongodb-configs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/mongo/mongodb-socket.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/mongo/mongodb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/socketio/key/socketio-keys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/socketio/socketio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/navbar-style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/markdown/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeLean.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/socket/IpQrCode.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/socket/SocketIO.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/socket/SocketMessage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/summenu/SubMenuGroup.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/summenu/SubMenuSingle.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const/socket-uri.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/my-knowledge.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/my-open-source.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/my-workbench.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/socket/socket-io.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/IPAddress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/StringUtils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/head.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/head_blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/head_yellow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/e2e/custom-assertions/elementCount.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/e2e/nightwatch.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/e2e/runner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/e2e/specs/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/jest.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/unit/specs/HelloWorld.spec.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release-vue2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="ProjectId" id="1iwL9byqmkcGamwdUkdQKq83S12" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c3682c0-05fd-48dd-aa77-42f7c28c9361" name="Default Changelist" comment="" />
+      <created>1602813556615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602813556615</updated>
+      <workItem from="1602813557669" duration="5540000" />
+      <workItem from="1602828081461" duration="319000" />
+    </task>
+    <task id="LOCAL-00001" summary="npm update">
+      <created>1602818493973</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602818493973</updated>
+    </task>
+    <task id="LOCAL-00002" summary="rm">
+      <created>1602826498604</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602826498604</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rm">
+      <created>1602826805982</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602826805982</updated>
+    </task>
+    <task id="LOCAL-00004" summary="registry.npm.taobao.org&#10;&#10;(cherry picked from commit bb7964123412b0a7a075f1b745b8cd77ec194897)">
+      <created>1602826946363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602826946363</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Revert &quot;clear&quot;&#10;&#10;This reverts commit 1834036e">
+      <created>1602827104797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602827104797</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Revert &quot;clear&quot;&#10;&#10;This reverts commit 1834036e">
+      <created>1602827377998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602827377998</updated>
+    </task>
+    <task id="LOCAL-00007" summary="registry.npm.taobao.org&#10;&#10;(cherry picked from commit a6f91ad983970eaaf63eae0822c0949ae8c4c9bb)">
+      <created>1602827432192</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602827432192</updated>
+    </task>
+    <task id="LOCAL-00008" summary="rm&#10;&#10;(cherry picked from commit 334958e648cc0d8725a2a23c1d462c769369692e)">
+      <created>1602827458541</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602827458541</updated>
+    </task>
+    <task id="LOCAL-00009" summary="vue2">
+      <created>1602827982119</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602827982119</updated>
+    </task>
+    <task id="LOCAL-00010" summary="vue2">
+      <created>1602828141010</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602828141010</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="npm update" />
+    <MESSAGE value="rm" />
+    <MESSAGE value="registry.npm.taobao.org&#10;&#10;(cherry picked from commit bb7964123412b0a7a075f1b745b8cd77ec194897)" />
+    <MESSAGE value="Revert &quot;clear&quot;&#10;&#10;This reverts commit 1834036e" />
+    <MESSAGE value="registry.npm.taobao.org&#10;&#10;(cherry picked from commit a6f91ad983970eaaf63eae0822c0949ae8c4c9bb)" />
+    <MESSAGE value="rm&#10;&#10;(cherry picked from commit 334958e648cc0d8725a2a23c1d462c769369692e)" />
+    <MESSAGE value="vue2" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="521" y="114" key="CommitChangelistDialog2" timestamp="1602828073716">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="521" y="114" key="CommitChangelistDialog2/44.23.1876.1057@44.23.1876.1057" timestamp="1602828073716" />
+    <state x="358" y="123" width="1337" height="832" key="DiffContextDialog" timestamp="1602827867081">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="358" y="123" width="1337" height="832" key="DiffContextDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602827867081" />
+    <state width="1516" height="346" key="GridCell.Tab.0.bottom" timestamp="1602828079202">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state width="1516" height="346" key="GridCell.Tab.0.bottom/44.23.1876.1057@44.23.1876.1057" timestamp="1602828079202" />
+    <state width="1516" height="346" key="GridCell.Tab.0.center" timestamp="1602828079201">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state width="1516" height="346" key="GridCell.Tab.0.center/44.23.1876.1057@44.23.1876.1057" timestamp="1602828079201" />
+    <state width="1516" height="346" key="GridCell.Tab.0.left" timestamp="1602828079201">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state width="1516" height="346" key="GridCell.Tab.0.left/44.23.1876.1057@44.23.1876.1057" timestamp="1602828079201" />
+    <state width="1516" height="346" key="GridCell.Tab.0.right" timestamp="1602828079202">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state width="1516" height="346" key="GridCell.Tab.0.right/44.23.1876.1057@44.23.1876.1057" timestamp="1602828079202" />
+    <state x="150" y="105" key="MergeDialog" timestamp="1602827933731">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="150" y="105" key="MergeDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602827933731" />
+    <state x="656" y="285" key="MultipleFileMergeDialog" timestamp="1602827455151">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="656" y="285" key="MultipleFileMergeDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602827455151" />
+    <state x="711" y="248" key="RollbackChangesDialog" timestamp="1602827045162">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="711" y="248" key="RollbackChangesDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602827045162" />
+    <state x="533" y="279" key="Vcs.Push.Dialog.v2" timestamp="1602826521534">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="533" y="279" key="Vcs.Push.Dialog.v2/44.23.1876.1057@44.23.1876.1057" timestamp="1602826521534" />
+    <state x="706" y="280" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1602826477357">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="706" y="280" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602826477357" />
+    <state x="828" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602813563305">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="828" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/44.23.1876.1057@44.23.1876.1057" timestamp="1602813563305" />
+    <state x="743" y="264" key="git4idea.branch.GitBranchIsNotFullyMergedDialog" timestamp="1602826827253">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="743" y="264" key="git4idea.branch.GitBranchIsNotFullyMergedDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602826827253" />
+    <state x="654" y="259" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602827711735">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="654" y="259" key="git4idea.branch.GitSmartOperationDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602827711735" />
+    <state x="277" y="302" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1602826329598">
+      <screen x="44" y="23" width="1876" height="1057" />
+    </state>
+    <state x="277" y="302" key="vcs.ApplyPatchDifferentiatedDialog/44.23.1876.1057@44.23.1876.1057" timestamp="1602826329598" />
+  </component>
+</project>
