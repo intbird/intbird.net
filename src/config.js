@@ -1,4 +1,4 @@
 exports.install = function (Vue, options) {
-  Vue.prototype.release = true
-  Vue.prototype.ConnectionUrl = Vue.prototype.release ? 'https://intbird.world:996' : 'https://localhost:996';
+  Vue.prototype.release = false
+  Vue.prototype.ConnectionUrl = Vue.prototype.release ? 'https://intbird.net:996' : 'https://localhost:996';
 }

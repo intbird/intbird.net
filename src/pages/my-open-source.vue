@@ -52,7 +52,7 @@
   const markdownDefault = '##### 持续开发中...\n' +
     '\n' +
     '1. 项目经历\n' +
-    '># [部分改造经历 -> 总览](http://intbird.world/#/opensource?action=experience)\n' +
+    '># [部分改造经历 -> 总览](http://intbird.net/#/opensource?action=experience)\n' +
     '\n' +
     '\n' +
     '2. 开源平台\n' +
@@ -240,7 +240,7 @@
         if (key.indexOf('-') === -1) {
           const itemIndex = parseInt(key)
           const item = configItems[itemIndex]
-          if (item.url) {
+          if (item && item.url) {
             window.open(item.url, '_blank')
           }
         } else {

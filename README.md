@@ -2,19 +2,19 @@
 
 `已升级为https,证书和db没有上传`
 
-# Build for website: [https://intbird.world](https://intbird.world)
+# Build for website: [https://intbird.net](https://intbird.net)
 ------
 # 1. website:
- https://intbird.world/
+ https://intbird.net/
 
 ## 2. socket url :
-   https://intbird.world/#/socketio
+   https://intbird.net/#/socketio
 
 ## 3. socket server url:
-   https://intbird.world:996
+   https://intbird.net:996
 
 # 4. repo migrate:
-the old repo will abandon :  
+the old repo will abandon :
  https://github.com/intbird/SocketIOControl-Server
 
 ------
@@ -44,5 +44,5 @@ npm run dev
 #### opensource
 ![截图](./gituser/home3.png)
 
-#### [socket-io](https://intbird.world/#/socketio)
+#### [socket-io](https://github.com/intbird/SocketIOControl-Server)
 ![截图](./gituser/home4.png)
