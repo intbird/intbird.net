@@ -1,5 +1,5 @@
 const Keys = {
-  SOCKET_PORT: 996, // 8080 ; 996
+  SOCKET_PORT: 443, // 8080 ; 996
 
   ON_EVENT_MESSAGE: 'message',
 

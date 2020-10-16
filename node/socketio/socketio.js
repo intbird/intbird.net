@@ -4,8 +4,8 @@ const https = require('https')
 const fs = require('fs')
 var path = require('path')
 const httpsOptions = {
-  cert: fs.readFileSync(path.join(__dirname, '../cert/intbird.net.crt')),
-  key: fs.readFileSync(path.join(__dirname, '../cert/intbird.key'))
+  cert: fs.readFileSync(path.join(__dirname, '../cert/intbird.net.cloudflare.pem')),
+  key: fs.readFileSync(path.join(__dirname, '../cert/intbird.net.cloudflare.key'))
 }
 
 const httpsServer = https.createServer(httpsOptions, express.app)
@@ -110,5 +110,5 @@ io.on('connection', function (socket) {
 const port = ioKeys.Keys.SOCKET_PORT
 // 开启端口
 httpsServer.listen(port, function () {
-  console.log(`\nsuccess : https://localhost:${port} \n`)
+  console.log(`\nsuccess : https://api.intbird.net:${port} \n`)
 })

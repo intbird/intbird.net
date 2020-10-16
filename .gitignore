@@ -17,5 +17,6 @@ selenium-debug.log
 *.sln
 
 
-/node/cert
+/node/cert/intbird.net.cloudflare.key
+/node/cert/intbird.net.cloudflare.pem
 /node/mongo/key/mongodb-config.js
