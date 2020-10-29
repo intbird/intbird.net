@@ -28,6 +28,7 @@
     "js-base64": "^2.6.4",
     "mavon-editor": "^2.9.0",
     "mongodb": "^3.6.2",
+    "pug": "^3.0.0",
     "qrcode": "^1.4.4",
     "remote": "^0.2.6",
     "remote-exec": "0.0.3",

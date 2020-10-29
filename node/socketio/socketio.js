@@ -1,22 +1,26 @@
 const express = require('../express/express.js')
-
+const ioKeys = require('./key/socketio-keys')
+const http = require('http')
 const https = require('https')
 const fs = require('fs')
 var path = require('path')
-const httpsOptions = {
+
+var httpsServer = https.createServer({
   cert: fs.readFileSync(path.join(__dirname, '../cert/intbird.net.cloudflare.pem')),
   key: fs.readFileSync(path.join(__dirname, '../cert/intbird.net.cloudflare.key'))
-}
+}, express.app)
 
-const httpsServer = https.createServer(httpsOptions, express.app)
+const httpServer = http.createServer(express.app)
 
-const io = require('socket.io')(httpsServer)
-const ioKeys = require('./key/socketio-keys')
+const server = ioKeys.Keys.HTTPS ? httpsServer : httpServer
+const socketio = require('socket.io')(server, {path: ioKeys.Keys.SOCKET_PATH})
+server.listen(ioKeys.Keys.SOCKET_PORT, function () {
+  console.log(`\nsuccess : http://localhost:${ioKeys.Keys.SOCKET_PORT} \n`)
+})
 
 const mongodb = require('../mongo/mongodb-socket.js')
-
 // 监听消息
-io.on('connection', function (socket) {
+socketio.on('connection', function (socket) {
   trackFlow('connection')
 
   socket.on(ioKeys.Keys.ON_EVENT_MESSAGE, function (messageBody) {
@@ -82,7 +86,7 @@ io.on('connection', function (socket) {
 
   function sendMessage(broadcast, message) {
     if (broadcast) {
-      io.emit(ioKeys.Keys.EMIT_EVENT_MESSAGE, message)
+      socketio.emit(ioKeys.Keys.EMIT_EVENT_MESSAGE, message)
     } else {
       socket.emit(ioKeys.Keys.EMIT_EVENT_MESSAGE, message)
     }
@@ -90,7 +94,7 @@ io.on('connection', function (socket) {
 
   function sendMessages(broadcast, messages) {
     if (broadcast) {
-      io.emit(ioKeys.Keys.EMIT_EVENT_MESSAGES, messages)
+      socketio.emit(ioKeys.Keys.EMIT_EVENT_MESSAGES, messages)
     } else {
       socket.emit(ioKeys.Keys.EMIT_EVENT_MESSAGES, messages)
     }
@@ -98,17 +102,12 @@ io.on('connection', function (socket) {
 
   function trackFlow(connect, error) {
     const result = {id: socket.id, connect: connect}
+    console.log(result);
     express.trackFlow(result)
-    io.emit(ioKeys.Keys.EMIT_TRACK, result)
+    socketio.emit(ioKeys.Keys.EMIT_TRACK, result)
 
     if (error) {
       console.log(error);
     }
   }
-})
-
-const port = ioKeys.Keys.SOCKET_PORT
-// 开启端口
-httpsServer.listen(port, function () {
-  console.log(`\nsuccess : https://api.intbird.net:${port} \n`)
 })

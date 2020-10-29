@@ -13,19 +13,6 @@
                         :index="myApp.Key+index">
             {{item.title}}
           </el-menu-item>
-
-          <el-submenu index="100">
-            <span slot="title">{{myBlog.title}}</span>
-            <el-menu-item v-for="(item,index) in myBlog.Menus"
-                          :key="myBlog.Key+index"
-                          :index="myBlog.Key+index">
-              {{item.title}}
-            </el-menu-item>
-          </el-submenu>
-
-          <el-menu-item>
-            <a href="https://intbird.net/intbird.html" target="_blank">我的简历</a>
-          </el-menu-item>
         </el-menu>
       </el-header>
       <el-main>
@@ -50,21 +37,11 @@
           Key: '1-',
           title: 'app bar',
           Menus: [
-            {title: '我的工作台', route: '/workbench'},
-            {title: '进阶学习', route: '/knowledge'},
-            {title: '我的开源', route: '/opensource'},
-          ],
-        },
-
-        myBlog: {
-          Key: '2-',
-          title: '联系方式',
-          Menus: [
-            {title: 'EMail', url: 'intbird@163.com'},
-            {title: '微信: xudeyu'},
-            {title: '钉钉: intbird'},
-            {title: '抖音: xudeyu1991'},
-            {title: '微信公众号: 许德雨'},
+            {title: 'Workbench', route: '/workbench'},
+            {title: 'Knowledge', route: '/knowledge'},
+            {title: 'Keynotes', route: '/opensource'},
+            {title: 'socket.io', route: '/socket.io'},
+            {title: 'intbird.net', route: '/intbird.net?url=https://www.intbird.net'},
           ],
         },
       }

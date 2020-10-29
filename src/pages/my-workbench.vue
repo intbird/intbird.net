@@ -2,12 +2,9 @@
   <div class="root-layout"
        v-loading="loading"
        element-loading-background="rgba(0, 0, 0, 0.2)">
-    开发中 ( 计划是可登录,每人fork一个职业的 + 自己拖拽的 )...
     <div class="item" v-for="(item,index) in workbenchConfigs" :key="index">
-      <el-divider contentPosition="left">
-        <span>{{item.groupTitle}}</span>
-      </el-divider>
-      <el-row :gutter="8">
+      <span class="item-title-style">{{item.groupTitle}}</span>
+      <el-row :gutter="8" class="item-content-style">
         <el-col class="item-col" :span="3" v-for="(item, index) in item.groupConfig" :key="item.name+index">
           <el-card shadow="hover" :body-style="{background: cardBackground}">
             <el-image class="image" :src="item.image" fit="contain"></el-image>
@@ -16,7 +13,6 @@
         </el-col>
       </el-row>
     </div>
-    mongodb-url: mongodb://root:xxxx@intbird.net:27017/intbird
   </div>
 </template>
 <script>
@@ -63,7 +59,7 @@
     display: flex;
     flex-direction: column;
     align-items: self-start;
-    min-width: 1268px;
+    width: 1268px;
     min-height: 800px;
   }
 
@@ -72,6 +68,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .item-title-style {
+    margin-top: 5px;
+    color: #cf9236;
+    text-align: left;
+    width: 100%;
+  }
+
+  .item-content-style {
+    padding: 8px;
+    margin-bottom: 12px;
   }
 
   .item-col {
@@ -84,8 +92,8 @@
   }
 
   .image {
-    width: 100px;
-    height: 100px;
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
   }
 

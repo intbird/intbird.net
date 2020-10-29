@@ -1,5 +1,7 @@
 const Keys = {
-  SOCKET_PORT: 443, // 8080 ; 996
+  HTTPS: false,
+  SOCKET_PORT: 8083, // 8080 ; 996
+  SOCKET_PATH: '/socket/socket.io/',
 
   ON_EVENT_MESSAGE: 'message',
 

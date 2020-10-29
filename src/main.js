@@ -18,7 +18,8 @@ Vue.use(iView)
 import VueSocketIO from 'vue-socket.io'
 Vue.use(new VueSocketIO({
   debug: false,
-  connection: Vue.prototype.ConnectionUrl,
+  connection: Vue.prototype.SocketConnectURL,
+  options: { path: Vue.prototype.SocketConnectPATH }
 }))
 
 import mavonEditor from 'mavon-editor'

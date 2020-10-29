@@ -3,9 +3,10 @@ import Router from 'vue-router'
 
 import MyWorkBench from '../pages/my-workbench'
 import Knowledge from '../pages/my-knowledge'
-import OpenSource from '../pages/my-open-source'
+import OpenSource from '../pages/my-opensource'
 
 import SocketIO from '../pages/socket/socket-io'
+import IFramePage from '../pages/iframe/iframe-page'
 
 Vue.use(Router)
 
@@ -30,10 +31,16 @@ export default new Router({
       path: '/opensource',
       name: 'openSource',
       component: OpenSource
-    }, {
-      path: '/socketio',
+    },
+    {
+      path: '/socket.io',
       name: 'SocketIO',
       component: SocketIO
+    },
+    {
+      path: '/intbird.net',
+      name: 'IntbirdNet',
+      component: IFramePage
     }
   ]
 })

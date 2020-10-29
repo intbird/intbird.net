@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import IpQrCode from '../../components/socket/IpQrCode'
-  import SocketIo from '../../components/socket/SocketIO'
+  import IpQrCode from '../../components/socket/SocketConnect'
+  import SocketIo from '../../components/socket/SocketController'
   import SocketMessage from '../../components/socket/SocketMessage'
 
   export default {
@@ -23,6 +23,8 @@
 
 <style scoped>
   .socket-panel {
+    width: 1268px;
+    min-height: 800px;
     padding: 20px;
     background: white;
     display: flex;

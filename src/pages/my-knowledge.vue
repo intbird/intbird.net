@@ -87,7 +87,7 @@
     display: flex;
     flex-direction: column;
     align-items: self-start;
-    min-width: 1268px;
+    width: 1268px;
     min-height: 800px;
   }
 
@@ -115,7 +115,7 @@
 
   .gp-title {
     margin-top: 5px;
-    color: #f3d19e;
+    color: #cf9236;
     text-align: left;
   }
 

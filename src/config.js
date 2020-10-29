@@ -1,4 +1,6 @@
 exports.install = function (Vue, options) {
   Vue.prototype.release = true
-  Vue.prototype.ConnectionUrl = Vue.prototype.release ? 'https://api.intbird.net:443' : 'https://localhost:996';
+  Vue.prototype.SocketConnectURL = Vue.prototype.release ? 'https://intbird.net' : 'http://localhost:8083'
+  Vue.prototype.SocketConnectPATH = '/socket/socket.io/'
+  Vue.prototype.ConnectionUrl = Vue.prototype.release ? 'https://intbird.net/express' : 'http://localhost:8083'
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <a :href="'https://github.com/intbird/SocketIOControl-Android'" target="_blank">Download Client Demo</a>
+    <a :href="'https://github.com/intbird/SocketIOControl-Android'" target="_blank">github link</a>
 
     <img class="image" :src="qrImage" v-on:click="getIp()"/>
     <el-autocomplete
@@ -22,7 +22,7 @@
     name: "QRCode",
     data() {
       return {
-        qrText: 'intbird.net:996',
+        qrText: 'intbird.net/socket/socket.io/',
         qrImage: '',
 
         tableTitle: [{
@@ -73,7 +73,7 @@
       },
       querySearch(queryString, cb) {
         const result = [
-          {"value": "intbird.net:996"},
+          {"value": "intbird.net/socket/socket.io/"},
         ];
         cb(result);
         this.showQRCode();
@@ -99,6 +99,6 @@
 
   .text {
     margin-bottom: 20px;
-    width: 151px;
+    width: 158px;
   }
 </style>

@@ -31,7 +31,7 @@
         </el-row>
       </el-aside>
       <el-main class="markdown">
-        <mavon-editor style="min-height: 600px" defaultOpen="preview" :subfield="false" v-model="markdownContent"/>
+        <mavon-editor toolbarsBackground="#3E3F43" previewBackground="#3E3F43" style="min-height: 600px;color: #808B96" defaultOpen="preview" :subfield="false" v-model="markdownContent"/>
       </el-main>
     </el-container>
   </div>
@@ -49,16 +49,7 @@
     experience:'experience'
   }
 
-  const markdownDefault = '##### 持续开发中...\n' +
-    '\n' +
-    '1. 项目经历\n' +
-    '># [部分改造经历 -> 总览](http://intbird.net/#/opensource?action=experience)\n' +
-    '\n' +
-    '\n' +
-    '2. 开源平台\n' +
-    '># [CSDN](https://blog.csdn.net/intbird)\n' +
-    '># [GitLab](https://gitlab.com/intbird)\n' +
-    '># [Github](https://github.com/intbird)\n';
+  const markdownDefault = require('../const/about-me.js').text;
 
   export default {
     name: 'OpenSourcePage',
@@ -74,7 +65,7 @@
             key: 'personal',
             item: [{
               icon: 'el-icon-lock',
-              title: '部分改造经历',
+              title: 'locked',
               menus: [],
             },
               {
@@ -108,10 +99,7 @@
                 icon: 'el-icon-house',
                 title: 'This Website',
                 menus: [],
-              },
-              {title: 'CSDN', url: 'https://blog.csdn.net/intbird'},
-              {title: 'Gitlab', url: 'https://gitlab.com/intbird'},
-              {title: 'GitHub', url: 'https://github.com/intbird'}],
+              }],
           }
         }
       }
@@ -283,7 +271,9 @@
   @import "../assets/css/navbar-style";
 
   .root-layout {
-    display: flex;
+    display: flow;
+    width: 1268px;
+    min-height: 800px;
   }
 
   .menu-style {

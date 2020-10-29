@@ -1,6 +1,4 @@
-# intbird-website
-
-`已升级为https,证书和db没有上传`
+# intbird.net
 
 # Build for website: [https://intbird.net](https://intbird.net)
 ------
@@ -8,14 +6,13 @@
  https://intbird.net/
 
 ## 2. socket url :
-   https://intbird.net/#/socketio
+   https://intbird.net/#/socket.io/
 
 ## 3. socket server url:
-   https://intbird.net:996
+   https://intbird.net/socket/socket.io/
 
 # 4. repo migrate:
-the old repo will abandon :
- https://github.com/intbird/SocketIOControl-Server
+old repo is: https://github.com/intbird/SocketIOControl-Server
 
 ------
 

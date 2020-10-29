@@ -1,5 +1,6 @@
 module.exports = {
   root: '/',
+  socketIO: '/socket.io',
   visitor: '/visitor',
   trackflow: '/trackflow',
 

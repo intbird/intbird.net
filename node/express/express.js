@@ -15,11 +15,18 @@ app.all('*', function (req, res, next) {
   next()
 })
 
-app.use(express.static(path.resolve(__dirname, '../../dist')))
+app.set('view engine', 'pug');
+app.set('views', path.resolve(__dirname, '../views'));
+app.use('/public', express.static(path.resolve(__dirname, '../public')));
 app.get(apiKeys.root, function (req, res) {
-  const html = fs.readFileSync(path.resolve(__dirname, '../../dist/index.html'), 'utf-8')
-  res.send(html)
+  res.render('index', { title: 'intbird-express-running' });
 })
+
+// app.use(express.static(path.resolve(__dirname, '../../dist')))
+// app.get(apiKeys.root, function (req, res) {
+//   const html = fs.readFileSync(path.resolve(__dirname, '../../dist/index.html'), 'utf-8')
+//   res.send(html)
+// })
 
 app.get(apiKeys.visitor, function (req, res) {
   // eslint-disable-next-line camelcase
