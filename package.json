@@ -17,7 +17,7 @@
   "dependencies": {
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clipboard-js": "^0.3.6",
     "date-format": "^3.0.0",
     "element-ui": "^2.13.2",
